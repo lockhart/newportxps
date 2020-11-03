@@ -553,7 +553,7 @@ class NewportXPS:
         if group is None or group not in self.groups:
             group = self.traj_group
         if group is None:
-            print("Do have a group to move")
+            print("Do not have a group to move")
             return
         ret = self._xps.GroupMoveAbort(self._sid, group)
         print('abort group ', group, ret)
