@@ -566,7 +566,7 @@ class NewportXPS:
         if group is None or group not in self.groups:
             group = self.traj_group
         if group is None:
-            print("Do have a group to move")
+            print("Do not have a group to move")
             return
         posnames = [p.lower() for p in self.groups[group]['positioners']]
         ret = self._xps.GroupPositionCurrentGet(self._sid, group, len(posnames))
